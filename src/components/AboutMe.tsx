@@ -51,7 +51,7 @@ export default function AboutMe() {
               : "-translate-y-10 opacity-0"
           }`}
         >
-          Hi, I'm Edward!
+          Hi, I&apos;m Edward!
         </h1>
       </div>
 
@@ -75,10 +75,10 @@ export default function AboutMe() {
           <div className="text-gray-700 flex-1 text-center sm:text-left">
             <h2 className="text-base font-bold mb-2 text-gray-800">about</h2>
             <p className="text-sm leading-relaxed text-gray-600">
-              I'm a Computer Science student at the University of Maryland,
+              I&apos;m a Computer Science student at the University of Maryland,
               College Park. My interests include backend infrastructure,
               full-stack development, AI/ML, distributed systems, cloud
-              computing, and data engineering. I've developed scalable,
+              computing, and data engineering. I&apos;ve developed scalable,
               cloud-native applications using a variety of languages and
               frameworks, namely Python, Java, Go, C#, React, and TypeScript. I
               have extensive experience with the AWS cloud suite, ETL workflows,
