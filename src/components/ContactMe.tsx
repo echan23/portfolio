@@ -12,7 +12,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white pb-20">
+    <section id="contact" className="pb-60 bg-white">
       <div className="max-w-2xl mx-auto px-6">
         <h2 className="text-2xl font-light tracking-tight mb-12 text-center text-gray-800">
           Contact Me

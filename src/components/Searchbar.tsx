@@ -20,7 +20,7 @@ const Searchbar: React.FC<SearchbarProps> = ({ input, setInput, onSubmit }) => {
   };
 
   return (
-    <div className="flex-shrink-0 p-4 sm:p-6 bg-white w-full max-w-screen-md mx-auto hidden sm:block">
+    <div className="flex-shrink-0 p-4 sm:p-6 bg-white w-full max-w-screen-md mx-auto">
       <div className="relative group">
         <input
           ref={inputRef}
@@ -29,7 +29,7 @@ const Searchbar: React.FC<SearchbarProps> = ({ input, setInput, onSubmit }) => {
           onChange={(e) => setInput(e.target.value)}
           onKeyPress={handleKeyPress}
           placeholder="Message..."
-          className="w-full px-4 py-3 sm:py-4 pr-12 text-sm sm:text-base rounded-full bg-gray-100 border border-gray-200 focus:bg-white focus:border-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all duration-200 placeholder-gray-400"
+          className="w-full px-4 py-3 sm:py-4 pr-12 text-sm sm:text-base rounded-full bg-gray-100 border border-gray-200 focus:bg-white focus:border-gray-300 hover:bg-gray-50 transition-all duration-200 placeholder-gray-400 focus:outline-none focus:ring-0"
         />
         <button
           onClick={onSubmit}

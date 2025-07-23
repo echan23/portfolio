@@ -8,11 +8,16 @@ const SearchDialog = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const searchInputRef = useRef<HTMLInputElement>(null);
   const [isMac, setIsMac] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       setIsMac(navigator.platform.toUpperCase().includes("MAC"));
+      const isMobileDevice = /Mobi|Android|iPhone|iPad|iPod/i.test(
+        navigator.userAgent
+      );
+      setIsMobile(isMobileDevice);
     }
 
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -62,12 +67,14 @@ const SearchDialog = () => {
               onClick={() => setIsOpen(true)}
               className="inline-flex items-center gap-1.5 text-gray-500 hover:text-gray-700 transition-colors"
             >
-              <span className="hidden sm:inline">Press</span>
-              <kbd className="px-1.5 py-0.5 bg-gray-100 border border-gray-300 rounded text-[10px] font-mono">
-                {isMac ? "⌘" : "Ctrl"} K
-              </kbd>
-              <span className="hidden sm:inline">to search</span>
-              <span className="inline sm:hidden">Search</span>
+              {!isMobile && <span className="hidden sm:inline">Press</span>}
+              {!isMobile && (
+                <kbd className="px-1.5 py-0.5 bg-gray-100 border border-gray-300 rounded text-[10px] font-mono">
+                  {isMac ? "⌘" : "Ctrl"} K
+                </kbd>
+              )}
+              {!isMobile && <span className="hidden sm:inline">to search</span>}
+              {isMobile && <span className="inline sm:hidden">Search</span>}
             </button>
           </div>
         </footer>
@@ -95,10 +102,12 @@ const SearchDialog = () => {
                 }}
                 className="flex-1 outline-none text-gray-900 placeholder-gray-500"
               />
-              <div className="hidden sm:flex items-center gap-1 text-gray-400 ml-3">
-                <span className="text-sm">{isMac ? "⌘" : "Ctrl"}</span>
-                <span className="text-sm">K</span>
-              </div>
+              {!isMobile && (
+                <div className="hidden sm:flex items-center gap-1 text-gray-400 ml-3">
+                  <span className="text-sm">{isMac ? "⌘" : "Ctrl"}</span>
+                  <span className="text-sm">K</span>
+                </div>
+              )}
             </div>
 
             <div className="px-4 py-2 border-t border-gray-100">
@@ -108,7 +117,6 @@ const SearchDialog = () => {
                     <button
                       onClick={() => {
                         if (suggestion === "Resume") {
-                          // Trigger resume download
                           const link = document.createElement("a");
                           link.href = "/assets/EdwardChanResume.pdf";
                           link.download = "EdwardChanResume.pdf";
