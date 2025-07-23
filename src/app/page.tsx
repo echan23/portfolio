@@ -8,7 +8,7 @@ import ContactSection from "@/components/ContactMe";
 export default function Home() {
   return (
     <div>
-      <main className=" sm:pt-10 sm:px-20 flex flex-col gap-y-40">
+      <main className=" sm:pt-10 sm:px-20 flex flex-col gap-y-60">
         <div id="about">
           <AboutMe />
         </div>

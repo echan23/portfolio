@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({
   resumeUrl = "/assets/EdwardChanResume.pdf",
 }) => {
   return (
-    <header className="bg-white w-screen" id="header">
+    <header className="bg-white w-screen ml-4" id="header">
       <style>{`
         @keyframes dropDown {
           from {
