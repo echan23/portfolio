@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { Github, ChevronDown } from "lucide-react";
+import { Github, ChevronDown, ExternalLink } from "lucide-react";
 
 type Project = {
   id: number;
@@ -103,110 +103,124 @@ export default function ProjectsSection(): React.ReactNode {
   };
 
   return (
-    <section className="w-full max-w-3xl mx-auto px-4">
-      <h2 className="text-2xl font-medium mb-4 pl-4">Projects</h2>
+    <section className="min-h-screen bg-white py-10 px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-3xl mx-auto">
+        <h2 className="text-xl sm:text-2xl font-medium mb-6 sm:mb-8 text-center sm:text-left">
+          Projects
+        </h2>
 
-      <ul className="space-y-6">
-        {projects.map((project, index) => {
-          const isExpanded = expandedProject === project.id;
+        <ul className="space-y-4 sm:space-y-6">
+          {projects.map((project, index) => {
+            const isExpanded = expandedProject === project.id;
 
-          return (
-            <li
-              key={project.id}
-              data-index={index}
-              className={`project-card transform transition-all duration-700 ease-out rounded-xl overflow-hidden hover:scale-[1.02] hover:shadow-lg hover:-translate-y-1 ${
-                visibleProjects.has(index)
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
-              }`}
-            >
-              <div
-                className={`transition-all duration-300 p-4 ${
-                  isExpanded ? "pb-3" : "pb-4"
+            return (
+              <li
+                key={project.id}
+                data-index={index}
+                className={`project-card transform transition-all duration-700 ease-out hover:bg-gray-50 rounded-lg sm:rounded-xl overflow-hidden hover:shadow-sm sm:hover:scale-[1.01] sm:hover:shadow-md sm:hover:-translate-y-1 ${
+                  visibleProjects.has(index)
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 translate-y-8"
                 }`}
               >
-                <div className="flex items-center justify-between">
-                  <button
-                    onClick={() => toggleProject(project.id)}
-                    className="flex items-center flex-1 text-left focus:outline-none group"
-                  >
-                    <div className="flex-1">
-                      <span className="text-lg font-medium text-gray-900 transition-all duration-300">
-                        {project.title}
-                      </span>
-                      <p className="text-sm text-gray-500 mt-1">
-                        {project.shortDescription}
-                      </p>
-                      <div className="flex items-center gap-2 mt-2">
-                        {project.tags.map((tag, index) => (
-                          <span key={index} className="text-xs text-gray-400">
-                            {index > 0 && "•"} {tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <ChevronDown
-                      size={16}
-                      className={`text-gray-400 transition-transform duration-300 ease-in-out ${
-                        isExpanded ? "rotate-180" : "rotate-0"
-                      }`}
-                    />
-                  </button>
-
-                  <div className="flex items-center ml-4">
-                    <Link
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 text-gray-400 hover:text-gray-900 transition-colors duration-300"
-                      aria-label={`View ${project.title} live demo`}
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="20"
-                        height="20"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                        <polyline points="15 3 21 3 21 9"></polyline>
-                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                      </svg>
-                    </Link>
-                    <Link
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2 text-gray-400 hover:text-gray-900 transition-colors duration-300"
-                      aria-label={`View ${project.title} on GitHub`}
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <Github size={20} />
-                    </Link>
-                  </div>
-                </div>
-
                 <div
-                  className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                    isExpanded
-                      ? "max-h-40 opacity-100 mt-4"
-                      : "max-h-0 opacity-0"
+                  className={`transition-all duration-300 p-3 sm:p-4 ${
+                    isExpanded ? "pb-2 sm:pb-3" : "pb-3 sm:pb-4"
                   }`}
                 >
-                  <p className="text-sm text-gray-600 pb-3">
-                    {project.fullDescription}
-                  </p>
+                  <div className="flex flex-col sm:flex-row sm:items-start gap-3 sm:gap-0">
+                    <button
+                      onClick={() => toggleProject(project.id)}
+                      className="flex items-start flex-1 text-left focus:outline-none group w-full"
+                    >
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span className="text-base sm:text-lg font-medium text-gray-900 transition-all duration-300 line-clamp-1">
+                            {project.title}
+                          </span>
+                          <ChevronDown
+                            size={16}
+                            className={`text-gray-400 transition-transform duration-300 ease-in-out flex-shrink-0 ${
+                              isExpanded ? "rotate-180" : "rotate-0"
+                            }`}
+                          />
+                        </div>
+                        <p className="text-xs sm:text-sm text-gray-500 mt-1 line-clamp-2">
+                          {project.shortDescription}
+                        </p>
+                        <div className="flex flex-wrap gap-1 mt-2">
+                          {project.tags.slice(0, 4).map((tag, tagIndex) => (
+                            <span
+                              key={tagIndex}
+                              className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                          {project.tags.length > 4 && (
+                            <span className="text-xs text-gray-400">
+                              +{project.tags.length - 4} more
+                            </span>
+                          )}
+                        </div>
+                      </div>
+                    </button>
+
+                    <div className="flex items-center gap-2 sm:ml-4 self-start">
+                      <Link
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 text-gray-400 hover:text-gray-900 transition-colors duration-300"
+                        aria-label={`View ${project.title} live demo`}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <ExternalLink size={16} />
+                      </Link>
+                      <Link
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 text-gray-400 hover:text-gray-900 transition-colors duration-300"
+                        aria-label={`View ${project.title} on GitHub`}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Github size={16} />
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div
+                    className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                      isExpanded
+                        ? "max-h-96 opacity-100 mt-3 sm:mt-4"
+                        : "max-h-0 opacity-0"
+                    }`}
+                  >
+                    <div className="border-t border-gray-200 pt-3">
+                      <p className="text-xs sm:text-sm text-gray-600 pb-2 sm:pb-3 leading-relaxed">
+                        {project.fullDescription}
+                      </p>
+                      {project.tags.length > 4 && isExpanded && (
+                        <div className="flex flex-wrap gap-1 mt-2 pt-2 border-t border-gray-100">
+                          {project.tags.map((tag, tagIndex) => (
+                            <span
+                              key={tagIndex}
+                              className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded"
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </li>
-          );
-        })}
-      </ul>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </section>
   );
 }

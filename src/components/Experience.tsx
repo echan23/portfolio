@@ -74,60 +74,64 @@ const Experience: React.FC = () => {
   }, []);
 
   return (
-    <section id="Experience" className="px-4 max-w-3xl mx-auto">
-      <h2 className="text-2xl font-medium text-gray-800 mb-8 text-left">
-        Experience
-      </h2>
+    <section
+      id="Experience"
+      className="min-h-screen bg-white py-10 px-4 sm:px-6 lg:px-8"
+    >
+      <div className="max-w-3xl mx-auto">
+        <h2 className="text-xl sm:text-2xl font-medium text-gray-800 mb-6 sm:mb-8 text-center sm:text-left">
+          Experience
+        </h2>
 
-      <div className="space-y-8">
-        {experiences.map((exp, index) => (
-          <div
-            key={index}
-            data-index={index}
-            className={`experience-item border-l border-gray-200 pl-5 transition-all duration-700 ease-out transform ${
-              visibleItems.has(index)
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 -translate-x-4"
-            }`}
-            style={{ transitionDelay: `${index * 150}ms` }}
-          >
-            <div className="relative">
-              <div className="absolute -left-[25px] top-1.5 w-3 h-3 bg-gray-200 rounded-full"></div>
+        <div className="space-y-6 sm:space-y-8">
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              data-index={index}
+              className={`experience-item border-l-2 sm:border-l border-gray-200 pl-4 sm:pl-5 transition-all duration-700 ease-out transform ${
+                visibleItems.has(index)
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 -translate-x-4"
+              }`}
+              style={{ transitionDelay: `${index * 150}ms` }}
+            >
+              <div className="relative">
+                <div className="absolute -left-[18px] sm:-left-[25px] top-1.5 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-gray-400 rounded-full border-2 border-white"></div>
 
-              <h3 className="text-base font-medium text-gray-800 flex items-center">
-                {exp.company}
-                {index === 0 && (
-                  <span className="ml-2 text-xs bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded">
-                    Milpitas, CA
-                  </span>
-                )}
-                {index === 1 && (
-                  <span className="ml-2 text-xs bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded">
-                    Remote
-                  </span>
-                )}
-                {index === 2 && (
-                  <span className="ml-2 text-xs bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded">
-                    Washington, D.C.
-                  </span>
-                )}
-              </h3>
+                <div className="mb-2">
+                  <h3 className="text-sm sm:text-base font-medium text-gray-800 mb-1">
+                    {exp.company}
+                  </h3>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mb-1">
+                    <span className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded w-fit">
+                      {index === 0 && "Milpitas, CA"}
+                      {index === 1 && "Remote"}
+                      {index === 2 && "Washington, D.C."}
+                    </span>
+                  </div>
+                </div>
 
-              <div className="flex justify-between items-baseline mb-1">
-                <p className="text-sm text-gray-700">{exp.role}</p>
-                <span className="text-xs text-gray-500">{exp.period}</span>
-              </div>
-
-              <div className="mt-2 space-y-1.5">
-                {exp.description.map((item, i) => (
-                  <p key={i} className="text-sm text-gray-600 leading-relaxed">
-                    {item}
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-2 gap-1">
+                  <p className="text-xs sm:text-sm text-gray-700 font-medium">
+                    {exp.role}
                   </p>
-                ))}
+                  <span className="text-xs text-gray-500">{exp.period}</span>
+                </div>
+
+                <div className="mt-3 space-y-2 sm:space-y-1.5">
+                  {exp.description.map((item, i) => (
+                    <p
+                      key={i}
+                      className="text-xs sm:text-sm text-gray-600 leading-relaxed"
+                    >
+                      {item}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );
