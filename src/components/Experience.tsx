@@ -18,9 +18,9 @@ const Experience: React.FC = () => {
       period: "June 2025 - Present",
       description: [
         "Engineered and scaled robust data pipelines leveraging Elasticsearch, Logstash, and MS SQL to extract, transform, and load (ETL) metadata for over 10,000,000 images used in semiconductor manufacturing.",
+        "Built a C# log monitoring service to parse Logstash logs and send real-time alerts, cutting incident response time by 50%.",
         "Developed an internal file search tool using React and Elasticsearch, enabling fast, precise retrieval of semiconductor image metadata and saving R&D teams over 50 hours of manual lookup time per quarter.",
-        "Developed a C# application to automate file traversal and metadata extraction, streamlining ingestion into MS SQL Server.",
-        "Wrote Python scripts to extract and clean Excel-based metadata (using pandas and openpyxl), enabling seamless integration into the pipeline.",
+        "Created a multithreaded C# application and Python scripts to automate file traversal, metadata extraction, and ingestion.",
       ],
     },
     {
