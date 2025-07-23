@@ -42,7 +42,7 @@ export default function AboutMe() {
   ];
 
   return (
-    <div className="pt-5 bg-transparent">
+    <div className="pt-10 pb-20 bg-transparent">
       <div className="flex justify-center mb-6">
         <h1
           className={`text-5xl font-bold text-gray-800 transition-all duration-700 ease-out transform ${
