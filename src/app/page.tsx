@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import AboutMe from "../components/AboutMe";
 import Experience from "../components/Experience";
 import NavBar from "../components/NavBar";

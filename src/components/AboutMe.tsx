@@ -42,22 +42,22 @@ export default function AboutMe() {
   ];
 
   return (
-    <div className="pt-10 bg-transparent">
+    <div className="pt-5 bg-transparent">
       <div className="flex justify-center mb-6">
         <h1
-          className={`text-4xl font-bold text-gray-800 transition-all duration-700 ease-out transform ${
+          className={`text-5xl font-bold text-gray-800 transition-all duration-700 ease-out transform ${
             isVisible
               ? "translate-y-0 opacity-100"
               : "-translate-y-10 opacity-0"
           }`}
         >
-          Hi, I'm Edward!
+          Hi, I&apos;m Edward!
         </h1>
       </div>
 
       <div className="flex justify-center mb-8">
         <div
-          className={`flex gap-6 flex-wrap sm:flex-nowrap max-w-2xl w-full transition-all duration-700 ease-out transform ${
+          className={`flex gap-6 flex-wrap sm:flex-nowrap max-w-3xl w-full transition-all duration-700 ease-out transform ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
           }`}
           style={{ transitionDelay: "150ms" }}
@@ -75,10 +75,10 @@ export default function AboutMe() {
           <div className="text-gray-700 flex-1">
             <h2 className="text-base font-bold mb-2 text-gray-800">about</h2>
             <p className="text-sm leading-relaxed text-gray-600">
-              I'm a Computer Science student at the University of Maryland,
+              I&apos;m a Computer Science student at the University of Maryland,
               College Park. My interests include backend infrastructure,
               full-stack development, AI/ML, distributed systems, cloud
-              computing, and data engineering. I've developed scalable,
+              computing, and data engineering. I&apos;ve developed scalable,
               cloud-native applications using a variety of languages and
               frameworks, namely Python, Java, Go, C#, React, and TypeScript. I
               have extensive experience with the AWS cloud suite, ETL workflows,
@@ -89,7 +89,7 @@ export default function AboutMe() {
       </div>
 
       <div
-        className={`max-w-2xl mx-auto transition-all duration-700 ease-out transform ${
+        className={`max-w-3xl mx-auto transition-all duration-700 ease-out transform ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
         }`}
         style={{ transitionDelay: "300ms" }}
