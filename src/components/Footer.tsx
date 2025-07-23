@@ -74,7 +74,9 @@ const SearchDialog = () => {
                 </kbd>
               )}
               {!isMobile && <span className="hidden sm:inline">to search</span>}
-              {isMobile && <span className="inline sm:hidden">Search</span>}
+              {isMobile && (
+                <span className="inline sm:hidden py-2">Tap to search</span>
+              )}
             </button>
           </div>
         </footer>
