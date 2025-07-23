@@ -64,7 +64,7 @@ export default function AboutMe() {
         >
           <div className="w-32 h-40 rounded-lg overflow-hidden flex-shrink-0 transition duration-300">
             <Image
-              src="/assets/me.jpg"
+              src="/assets/me.JPG"
               alt="Profile"
               width={128}
               height={160}
