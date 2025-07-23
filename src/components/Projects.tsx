@@ -42,7 +42,7 @@ export default function ProjectsSection(): React.ReactNode {
       shortDescription:
         "AI powered CLI tool that answers questions using lecture PDFs",
       fullDescription:
-        "I built this Retrieval-Augmented Generation (RAG) system to help me study by querying my class PDFs through a CLI interface. It parses and chunks documents with PyMuPDF, generates embeddings using OpenAI, and indexes them with FAISS. When I ask a question, it retrieves the most relevant chunks and generates a response locally using Ollama. The Python backend handles all parsing, embedding, and retrieval logic, while FastAPI powers the CLI and supporting functionality.",
+        "I built this Retrieval-Augmented Generation (RAG) system to help me study by querying my class PDFs through a CLI interface. It parses and chunks documents with PyMuPDF, generates embeddings using Hugging Face transformers, and indexes them with FAISS. When I ask a question, it retrieves the most relevant chunks and generates a response locally using Ollama. The Python backend handles all parsing, embedding, and retrieval logic, while FastAPI powers the CLI and supporting functionality.",
       tags: ["Python", "FastAPI", "LangChain", "OpenAI API", "FAISS"],
       url: "https://github.com/echan23/ragbot",
       github: "https://github.com/echan23/ragbot",
