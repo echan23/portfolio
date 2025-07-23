@@ -105,7 +105,7 @@ export default function ProjectsSection(): React.ReactNode {
   return (
     <section className="min-h-screen bg-white py-10 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-3xl mx-auto">
-        <h2 className="text-xl sm:text-2xl font-medium mb-6 sm:mb-8 text-center sm:text-left">
+        <h2 className="text-xl sm:text-2xl font-medium mb-6 sm:mb-8 text-center sm:text-left text-gray-800 font-bold">
           Projects
         </h2>
 
