@@ -20,7 +20,7 @@ const Searchbar: React.FC<SearchbarProps> = ({ input, setInput, onSubmit }) => {
   };
 
   return (
-    <div className="flex-shrink-0 p-4 sm:p-6 bg-white w-full max-w-screen-md mx-auto">
+    <div className="flex-shrink-0 p-4 sm:p-6 bg-white w-full max-w-screen-md mx-auto hidden sm:block">
       <div className="relative group">
         <input
           ref={inputRef}
