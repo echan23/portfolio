@@ -21,28 +21,56 @@ export default function AboutMe() {
     "C#",
     "C",
     "SQL",
+    "HTML/CSS",
+    "OCaml",
     "Rust",
     "Swift",
-    "HTML/CSS",
   ];
 
   const frameworks = [
     "React",
     "Flask",
     "Node.js",
-    "MySQL",
-    "PostgreSQL",
-    "MongoDB",
+    "Express",
+    "FastAPI",
+    "Next.js",
+    "Tailwind CSS",
+    "Redux",
     "Pandas",
     "NumPy",
-    "Flutter SDK",
     "Selenium",
     "BeautifulSoup",
     "SwiftUI",
+    "Flutter SDK",
+  ];
+
+  const tools = [
+    "Git",
+    "GitHub",
+    "VSCode",
+    "Eclipse",
+    "IntelliJ",
+    "Figma",
+    "Notion",
+    "WebSockets",
+    "Elasticsearch",
+  ];
+
+  const databases = [
+    "MySQL",
+    "PostgreSQL",
+    "MongoDB",
+    "Redis",
+    "AWS S3",
+    "AWS RDS",
+    "AWS EC2",
+    "AWS Lambda",
+    "AWS DynamoDB",
+    "AWS ECS",
   ];
 
   return (
-    <div className="min-h-screen pt-10 pb-20 bg-white px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen pb-20 bg-white px-4 sm:px-6 lg:px-8">
       <div className="flex justify-center mb-6">
         <h1
           className={`text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 transition-all duration-700 ease-out transform text-center ${
@@ -111,9 +139,9 @@ export default function AboutMe() {
           </div>
         </div>
 
-        <div>
+        <div className="mb-6">
           <h2 className="text-base font-bold mb-2 text-gray-800">
-            frameworks & libraries
+            frameworks/libraries
           </h2>
           <div className="flex flex-wrap gap-1.5 justify-center sm:justify-start">
             {frameworks.map((fw, i) => (
@@ -125,6 +153,44 @@ export default function AboutMe() {
                 style={{ transitionDelay: `${500 + i * 30}ms` }}
               >
                 {fw}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="mb-6">
+          <h2 className="text-base font-bold mb-2 text-gray-800">
+            tools & technologies
+          </h2>
+          <div className="flex flex-wrap gap-1.5 justify-center sm:justify-start">
+            {tools.map((tool, i) => (
+              <span
+                key={i}
+                className={`px-2 py-0.5 bg-gray-100 text-gray-700 rounded-full text-xs font-normal transition-opacity duration-300 ${
+                  isVisible ? "opacity-100" : "opacity-0"
+                }`}
+                style={{ transitionDelay: `${550 + i * 30}ms` }}
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h2 className="text-base font-bold mb-2 text-gray-800">
+            databases & cloud
+          </h2>
+          <div className="flex flex-wrap gap-1.5 justify-center sm:justify-start">
+            {databases.map((db, i) => (
+              <span
+                key={i}
+                className={`px-2 py-0.5 bg-gray-100 text-gray-700 rounded-full text-xs font-normal transition-opacity duration-300 ${
+                  isVisible ? "opacity-100" : "opacity-0"
+                }`}
+                style={{ transitionDelay: `${600 + i * 30}ms` }}
+              >
+                {db}
               </span>
             ))}
           </div>
