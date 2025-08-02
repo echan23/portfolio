@@ -59,3 +59,9 @@ body {
   --color-3: #45b7d1; /* Blue */
   --color-4: #96ceb4; /* Green */
 }
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
