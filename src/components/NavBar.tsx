@@ -15,15 +15,14 @@ const NavBar: React.FC = () => {
 
   const handleItemClick = (index: number, id: string) => {
     setSelectedIndex(index);
-
-    if (id === "about") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      const el = document.getElementById(id);
-      if (el) {
-        const yOffset = -80;
-        const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
-        window.scrollTo({ top: y, behavior: "smooth" });
+    const el = document.getElementById(id);
+    if (el) {
+      if (id === "about") {
+        document
+          .getElementById("header")
+          ?.scrollIntoView({ behavior: "smooth" });
+      } else {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
       }
     }
   };
