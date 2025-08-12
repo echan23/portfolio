@@ -93,7 +93,7 @@ const SearchDialog = () => {
               <input
                 ref={searchInputRef}
                 type="text"
-                placeholder="Ask me anything..."
+                placeholder="Ask me about my goals, experience, anything..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onKeyDown={(e) => {
