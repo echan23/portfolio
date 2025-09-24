@@ -13,9 +13,18 @@ const Experience: React.FC = () => {
 
   const experiences: ExperienceItem[] = [
     {
+      company: "VetsEZ Inc",
+      role: "Software Development Intern",
+      period: "September 2025 - Present",
+      description: [
+        "Refactored a legacy MUMPS/ObjectScript service to Java, enhancing maintainability and reducing technical debt.",
+        "Developed and ran unit/integration tests covering 95% of migrated functionality, ensuring parity with legacy logic.",
+      ],
+    },
+    {
       company: "Headway Technologies",
       role: "Software Engineering Intern",
-      period: "June 2025 - Present",
+      period: "June 2025 - August 2025",
       description: [
         "Engineered and scaled robust data pipelines leveraging Elasticsearch, Logstash, and MS SQL to extract, transform, and load (ETL) metadata for over 10,000,000 images used in semiconductor manufacturing.",
         "Developed an internal file search tool using React and Elasticsearch, enabling immediate defect analysis and saving R&D teams over 50 hours of manual lookup time per quarter.",
