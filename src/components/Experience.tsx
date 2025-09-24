@@ -113,9 +113,10 @@ const Experience: React.FC = () => {
                   </h3>
                   <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 mb-1">
                     <span className="text-xs bg-gray-100 text-gray-600 px-2 py-0.5 rounded w-fit">
-                      {index === 0 && "Milpitas, CA"}
-                      {index === 1 && "Remote"}
-                      {index === 2 && "Washington, D.C."}
+                      {index === 0 && "Remote"}
+                      {index === 1 && "Milpitas, CA"}
+                      {index === 2 && "Remote"}
+                      {index === 3 && "Washington, D.C."}
                     </span>
                   </div>
                 </div>
