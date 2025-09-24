@@ -18,9 +18,9 @@ const Experience: React.FC = () => {
       period: "June 2025 - Present",
       description: [
         "Engineered and scaled robust data pipelines leveraging Elasticsearch, Logstash, and MS SQL to extract, transform, and load (ETL) metadata for over 10,000,000 images used in semiconductor manufacturing.",
-        "Built a C# log monitoring service to parse Logstash logs and send real-time alerts, cutting incident response time by 50%.",
-        "Developed an internal file search tool using React and Elasticsearch, enabling fast, precise retrieval of semiconductor image metadata and saving R&D teams over 50 hours of manual lookup time per quarter.",
+        "Developed an internal file search tool using React and Elasticsearch, enabling immediate defect analysis and saving R&D teams over 50 hours of manual lookup time per quarter.",
         "Created a multithreaded C# application and Python scripts to automate file traversal, metadata extraction, and ingestion.",
+        "Built a C# log monitoring service to parse Logstash logs and send real-time alerts, cutting incident response time by 50%.",
       ],
     },
     {
@@ -28,10 +28,10 @@ const Experience: React.FC = () => {
       role: "Software Development Intern",
       period: "October 2024 - January 2025",
       description: [
-        "Developed backend user authentication system using AWS Amplify and Cognito, ensuring secure and seamless access for users in a Flutter-based social media application.",
-        "Cut application load time and redundant API calls by 30% by implementing session-based caching via BLoC and GraphQL.",
-        "Used AWS Lambda to generate pre-signed S3 URLs for secure file uploads, offloading transfers from the backend.",
-        "Contributed in an Agile environment via stand-ups and retrospectives to enhance team communication and workflow.",
+        "Developed a secure file-upload pipeline with AWS Lambda–generated pre-signed S3 URLs, reducing backend processing overhead by 70% and improving upload scalability.",
+        "Architected GraphQL APIs and re-engineered existing services on AWS AppSync with DynamoDB, implementing BLoC-based caching solutions that cut redundant requests by 30% and optimized content delivery performance.",
+        "Built end-to-end authentication system with AWS Amplify and Cognito for secure user access in a Flutter social media app.",
+        "Set up CI/CD pipelines in GitHub Actions to automate testing and deployment, accelerating release cycles.",
       ],
     },
     {
