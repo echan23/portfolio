@@ -11,49 +11,49 @@ interface ExperienceItem {
 const Experience: React.FC = () => {
   const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set());
 
-  const experiences: ExperienceItem[] = [
-    {
-      company: "VetsEZ Inc",
-      role: "Software Development Intern",
-      period: "September 2025 - Present",
-      description: [
-        "Refactored a legacy MUMPS/ObjectScript service to Java, enhancing maintainability and reducing technical debt.",
-        "Developed and ran unit/integration tests covering 95% of migrated functionality, ensuring parity with legacy logic.",
-      ],
-    },
-    {
-      company: "Headway Technologies",
-      role: "Software Engineering Intern",
-      period: "June 2025 - August 2025",
-      description: [
-        "Engineered and scaled robust data pipelines leveraging Elasticsearch, Logstash, and MS SQL to extract, transform, and load (ETL) metadata for over 10,000,000 images used in semiconductor manufacturing.",
-        "Developed an internal file search tool using React and Elasticsearch, enabling immediate defect analysis and saving R&D teams over 50 hours of manual lookup time per quarter.",
-        "Created a multithreaded C# application and Python scripts to automate file traversal, metadata extraction, and ingestion.",
-        "Built a C# log monitoring service to parse Logstash logs and send real-time alerts, cutting incident response time by 50%.",
-      ],
-    },
-    {
-      company: "Umee",
-      role: "Software Development Intern",
-      period: "October 2024 - January 2025",
-      description: [
-        "Developed a secure file-upload pipeline with AWS Lambda–generated pre-signed S3 URLs, reducing backend processing overhead by 70% and improving upload scalability.",
-        "Architected GraphQL APIs and re-engineered existing services on AWS AppSync with DynamoDB, implementing BLoC-based caching solutions that cut redundant requests by 30% and optimized content delivery performance.",
-        "Built end-to-end authentication system with AWS Amplify and Cognito for secure user access in a Flutter social media app.",
-        "Set up CI/CD pipelines in GitHub Actions to automate testing and deployment, accelerating release cycles.",
-      ],
-    },
-    {
-      company: "Internal Revenue Service",
-      role: "Data Analyst Intern",
-      period: "January 2024 - May 2024",
-      description: [
-        "Cleaned and normalized taxpayer data for over 60,000 individuals using SQL Server, ensuring consistency and accuracy.",
-        "Automated Power BI dashboards, reducing audit team data prep time by 30% and improving discrepancy detection.",
-        "Maintained 500+ intern records in SharePoint, ensuring data accuracy, consistency, and efficient access for HR teams.",
-      ],
-    },
-  ];
+const experiences: ExperienceItem[] = [
+  {
+    company: "VetsEZ Inc",
+    role: "Software Development Intern",
+    period: "September 2025 - Present",
+    description: [
+      "Migrated a MUMPS/ObjectScript service to Java Spring Boot using OData and Apache Olingo, implementing RESTful design patterns to improve modularity and reusability.",
+      "Integrated automated testing and deployment workflows into Jenkins and GitHub Actions CI/CD pipelines, enhancing reliability and release consistency.",
+    ],
+  },
+  {
+    company: "Headway Technologies",
+    role: "Software Engineering Intern",
+    period: "June 2025 - August 2025",
+    description: [
+      "Built ETL pipelines using Elasticsearch, Logstash, and MS SQL to process over 30 million image metadata records, enabling real-time defect analysis in semiconductor manufacturing.",
+      "Developed an internal React + Elasticsearch search tool for instant defect image lookup, eliminating 50+ hours of manual research per quarter.",
+      "Created multithreaded C# and Python (pandas/numpy) workflows to automate data ingestion and transformation, improving throughput and reducing human intervention.",
+      "Implemented a C# log monitoring service to parse Logstash logs and trigger real-time alerts, cutting incident response time by 50%.",
+    ],
+  },
+  {
+    company: "Umee",
+    role: "Software Development Intern",
+    period: "October 2024 - January 2025",
+    description: [
+      "Implemented a secure file-upload pipeline on AWS Lambda using pre-signed S3 URLs, reducing backend overhead by 70%.",
+      "Architected new GraphQL APIs and re-engineered legacy services on AWS AppSync + DynamoDB, leveraging BLoC caching to cut redundant requests by 30% and boost content delivery speed.",
+      "Built end-to-end authentication with AWS Amplify and Cognito for secure user access in a Flutter social media app.",
+    ],
+  },
+  {
+    company: "Internal Revenue Service",
+    role: "Data Analyst Intern",
+    period: "January 2024 - May 2024",
+    description: [
+      "Cleaned and standardized 60K+ taxpayer records in SQL Server to ensure accuracy and data integrity.",
+      "Developed Power BI dashboards to replace manual Excel workflows, improving data turnaround by 40% for 10+ stakeholders.",
+      "Maintained 500+ intern records in SharePoint, ensuring consistency and accessibility for HR operations.",
+    ],
+  },
+];
+
 
   useEffect(() => {
     const observer = new IntersectionObserver(
