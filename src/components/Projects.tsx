@@ -38,6 +38,25 @@ export default function ProjectsSection(): React.ReactNode {
     },
     {
       id: 2,
+      title: "CitySage.net",
+      shortDescription:
+        "Real-time urban intelligence dashboard for Washington, D.C.",
+      fullDescription:
+        "CitySage is a real-time urban intelligence dashboard that aggregates live traffic feeds, weather alerts, and metro data for Washington, D.C., serving 50+ users. Distributed inference workers deployed on AWS EC2 process over 10 traffic camera streams at 10 FPS using a custom-trained YOLOv8 model achieving 90%+ detection accuracy. The Flask backend handles distributed job routing and data aggregation, while the React frontend visualizes real-time detections and alerts. OpenAI API integration generates natural-language summaries of detected events from logs stored in Amazon RDS.",
+      tags: [
+        "Python",
+        "YOLOv8",
+        "Flask",
+        "React",
+        "Roboflow API",
+        "OpenAI API",
+        "AWS (EC2, RDS)",
+      ],
+      url: "https://citysage.net",
+      github: "https://github.com/benli1003/CitySage",
+    },
+    {
+      id: 3,
       title: "RAG-Powered Study Assistant",
       shortDescription:
         "AI powered CLI tool that answers questions using lecture PDFs",
@@ -48,7 +67,7 @@ export default function ProjectsSection(): React.ReactNode {
       github: "https://github.com/echan23/ragbot",
     },
     {
-      id: 3,
+      id: 4,
       title: "TerpBites.net",
       shortDescription: "Real-time nutrition data from UMD Dining Services",
       fullDescription:
